@@ -5,6 +5,7 @@ module.exports = function (config) {
 
     return function () {
         server.init({
+            online: false,
             open: false,
             port: 2345,
             reloadOnRestart: true,
