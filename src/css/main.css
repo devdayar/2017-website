@@ -5,7 +5,7 @@
 }
 
 .external-green-lines::after {
-    background-color: #54ffda;
+    background-color: #51ffe1;
     content: "";
     height: 0.125rem;
     position: absolute;
@@ -16,7 +16,7 @@
 }
 
 .external-green-lines::before {
-    background-color: #54ffda;
+    background-color: #51ffe1;
     bottom: -0.125rem;
     content: "";
     height: 0.125rem;
@@ -38,7 +38,7 @@
 }
 
 .header-bg::after {
-    background-color: rgba(36, 37, 79, 0.75);
+    background-color: rgba(36, 35, 82, 0.75);
     bottom: 0;
     content: "";
     display: block;
@@ -51,7 +51,7 @@
 }
 
 .header-bg::before {
-    background-color: #54ffda;
+    background-color: #51ffe1;
     content: "";
     display: block;
     height: 100%;
@@ -68,7 +68,7 @@
 }
 
 .header-top-decoration::after {
-    background-color: #24254f;
+    background-color: #242352;
     content: "";
     display: block;
     height: 25px;
@@ -80,7 +80,7 @@
 }
 
 .header-top-decoration::before {
-    background-color: #54ffda;
+    background-color: #51ffe1;
     content: "";
     display: block;
     height: 25px;
@@ -103,6 +103,122 @@
     max-width: 275px;
 }
 
+.profile:hover .profile-shadow {
+    transform: scale(1.05);
+}
+
+.profile:hover .profile-shadow::before {
+    transform: translateX(20px) translateY(-20px);
+}
+
+.profile-shadow {
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.profile-shadow::before {
+    background-color: rgba(81, 255, 225, 0.5);
+    bottom: -10px;
+    content: "";
+    left: -10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: all 0.25s ease;
+    z-index: -1;
+}
+
+.profile-toggle-children > span:last-child,
+.profile-toggle-children > span:last-child,
+.profile-toggle-children > span:last-child {
+    height: 0;
+    margin-left: -25px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+}
+
+.profile:active .profile-toggle-children > span:first-child,
+.profile:focus .profile-toggle-children > span:first-child,
+.profile:hover .profile-toggle-children > span:first-child {
+    display: none;
+}
+
+.profile:active .profile-toggle-children > span:last-child,
+.profile:focus .profile-toggle-children > span:last-child,
+.profile:hover .profile-toggle-children > span:last-child {
+    height: auto;
+    margin-left: 0;
+    opacity: 1;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slides {
+    animation: slidy 30s infinite alternate;
+    left: 0;
+    position: relative;
+    width: 500%;
+}
+
+.slides > img {
+    float: left;
+    vertical-align: bottom;
+    width: 20%;
+}
+
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    18% {
+        left: 0%;
+    }
+
+    22% {
+        left: -100%;
+    }
+
+    40% {
+        left: -100%;
+    }
+
+    44% {
+        left: -200%;
+    }
+
+    62% {
+        left: -200%;
+    }
+
+    66% {
+        left: -300%;
+    }
+
+    84% {
+        left: -300%;
+    }
+
+    88% {
+        left: -400%;
+    }
+
+    100% {
+        left: -400%;
+    }
+}
+
+.w-200 {
+    width: 200px;
+}
+
+[data-aload] {
+    background-image: none !important;
+}
+
 @media screen and (min-width: 60em) {
     .fg-0-l {
         flex-grow: 0;
@@ -118,6 +234,10 @@
 }
 
 @media screen and (min-width: 70em) {
+    .flex-no-wrap-xl {
+        flex-wrap: nowrap;
+    }
+
     .w-40-xl {
         width: 40%;
     }
