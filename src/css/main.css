@@ -117,7 +117,7 @@
 }
 
 .profile-shadow::before {
-    background-color: rgba(81, 255, 225, 0.5);
+    background-color: #51ffe1;
     bottom: -10px;
     content: "";
     left: -10px;
