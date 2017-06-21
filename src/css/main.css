@@ -26,6 +26,10 @@
     z-index: 2;
 }
 
+.grayscale {
+    filter: grayscale(100%);
+}
+
 .h-90 {
     height: 90%;
 }
@@ -38,12 +42,14 @@
 }
 
 .header-bg::after {
-    background-color: rgba(36, 35, 82, 0.75);
+    background: #0066bf;
     bottom: 0;
     content: "";
     display: block;
+    filter: brightness(0.75);
     height: 100%;
     left: 0;
+    mix-blend-mode: color;
     position: absolute;
     right: 0;
     top: 0;
@@ -116,6 +122,19 @@
     transition: all 0.25s ease;
 }
 
+.profile-shadow::after {
+    background: #0066bf;
+    bottom: 0;
+    content: "";
+    filter: brightness(0.75);
+    left: 0;
+    mix-blend-mode: color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
 .profile-shadow::before {
     background-color: #51ffe1;
     bottom: -10px;
@@ -125,6 +144,7 @@
     right: 10px;
     top: 10px;
     transition: all 0.25s ease;
+    will-change: contents;
     z-index: -1;
 }
 
