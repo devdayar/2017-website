@@ -114,7 +114,7 @@
 }
 
 .profile:hover .profile-shadow::before {
-    transform: translateX(20px) translateY(-20px);
+    transform: translateX(10px) translateY(-10px);
 }
 
 .profile-shadow {
@@ -137,14 +137,14 @@
 
 .profile-shadow::before {
     background-color: #51ffe1;
-    bottom: -10px;
+    bottom: 0;
     content: "";
-    left: -10px;
+    left: 0;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 0;
+    top: 0;
+    transform: translateX(-10px) translateY(10px);
     transition: all 0.25s ease;
-    will-change: contents;
     z-index: -1;
 }
 
@@ -152,10 +152,10 @@
 .profile-toggle-children > span:last-child,
 .profile-toggle-children > span:last-child {
     height: 0;
-    margin-left: -25px;
+    margin-left: -50px;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.5s ease-out;
+    transition: all 0.25s ease-out;
 }
 
 .profile:active .profile-toggle-children > span:first-child,
