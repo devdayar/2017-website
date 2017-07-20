@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const stylelint = require('gulp-stylelint')
+const stylelintFormatter = require('stylelint-formatter-pretty')
 
 module.exports = function (config) {
     return function () {
@@ -7,7 +8,7 @@ module.exports = function (config) {
             .pipe(stylelint({
                 failAfterError: false,
                 reporters: [{
-                    formatter: 'verbose',
+                    formatter: stylelintFormatter,
                     console: true
                 }]
             }))

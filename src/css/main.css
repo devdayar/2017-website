@@ -1,120 +1,11 @@
 @import './vendor/tachyons@4.7.4.css';
 
-.external-green-lines {
-    position: relative;
-}
-
-.external-green-lines::after {
-    background-color: #51ffe1;
-    content: "";
-    height: 0.125rem;
-    position: absolute;
-    right: -200px;
-    top: -0.125rem;
-    width: 200px;
-    z-index: 2;
-}
-
-.external-green-lines::before {
-    background-color: #51ffe1;
-    bottom: -0.125rem;
-    content: "";
-    height: 0.125rem;
-    position: absolute;
-    right: -200px;
-    width: 200px;
-    z-index: 2;
-}
-
-.h-90 {
-    height: 90%;
-}
-
-.header-bg {
-    background-image: url("/assets/header/bg.jpg");
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.header-bg::before {
-    background-color: #51ffe1;
-    content: "";
-    display: block;
-    height: 100%;
-    left: -40px;
-    position: absolute;
-    right: 40px;
-    top: 40px;
-    z-index: -1;
-}
-
-.header-top-decoration {
-    height: 40px;
-    position: relative;
-}
-
-.header-top-decoration::after {
-    background-color: #242352;
-    content: "";
-    display: block;
-    height: 25px;
-    left: 40px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-}
-
-.header-top-decoration::before {
-    background-color: #51ffe1;
-    content: "";
-    display: block;
-    height: 25px;
-    left: 20px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    z-index: 1;
-}
-
 .miriam-libre {
     font-family: 'Miriam Libre', sans-serif;
 }
 
-.mh-90 {
-    max-height: 90px;
-}
-
-.mw-275 {
-    max-width: 275px;
-}
-
-.profile:hover .profile-shadow {
-    transform: scale(1.05);
-}
-
-.profile:hover .profile-shadow::before {
-    transform: translateX(10px) translateY(-10px);
-}
-
-.profile-shadow {
-    position: relative;
-    transition: all 0.25s ease;
-}
-
-.profile-shadow::before {
-    background-color: #51ffe1;
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translateX(-10px) translateY(10px);
-    transition: all 0.25s ease;
-    will-change: transform;
-    z-index: -1;
+.mw-200 {
+    max-width: 200px;
 }
 
 .profile-toggle-children > span:last-child,
@@ -200,34 +91,12 @@
     }
 }
 
-.w-200 {
-    width: 200px;
-}
-
 [data-aload] {
     background-image: none !important;
-}
-
-@media screen and (min-width: 60em) {
-    .fg-0-l {
-        flex-grow: 0;
-    }
-
-    .mh-170-l {
-        max-height: 170px;
-    }
-
-    .mw-500-l {
-        max-width: 500px;
-    }
 }
 
 @media screen and (min-width: 70em) {
     .flex-no-wrap-xl {
         flex-wrap: nowrap;
-    }
-
-    .w-40-xl {
-        width: 40%;
     }
 }
