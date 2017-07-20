@@ -16,20 +16,23 @@
     }
 }
 
-.fade-in-down {
+.fade-in-down > * {
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-name: fadeInDown;
     opacity: 0;
 }
 
-.fade-in-down:nth-child(2) {
+.fade-in-down > *:nth-child(2) {
     animation-delay: 0.2s;
 }
 
-.fade-in-down:nth-child(3),
-.fade-in-down:nth-child(4) {
+.fade-in-down > *:nth-child(3),
+.fade-in-down > *:nth-child(4) {
     animation-delay: 0.4s;
+}
+
+.fade-in-down-trigger.fade-in-down > * {
+    animation-name: fadeInDown;
 }
 
 .logo {
