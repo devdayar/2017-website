@@ -1,7 +1,7 @@
 @import './vendor/tachyons@4.7.4.css';
 
 .bg-header {
-    background-image: url('/assets/header/bg.png');
+    background-image: url('/assets/header/bg.jpg');
 }
 
 @keyframes fadeInDown {
