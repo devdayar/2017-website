@@ -1,5 +1,41 @@
 @import './vendor/tachyons@4.7.4.css';
 
+.bg-header {
+    background-image: url('/assets/header/bg.png');
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -50px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fade-in-down {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fadeInDown;
+    opacity: 0;
+}
+
+.fade-in-down:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.fade-in-down:nth-child(3),
+.fade-in-down:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.logo {
+    width: 440px;
+}
+
 .miriam-libre {
     font-family: 'Miriam Libre', sans-serif;
 }
@@ -47,6 +83,63 @@
     float: left;
     vertical-align: bottom;
     width: 20%;
+}
+
+.triangle {
+    position: relative;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    45% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    70% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    95% {
+        transform: rotate(270deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.triangle::before {
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-name: rotate;
+    animation-timing-function: ease-in-out;
+    background-image: url('/assets/forms/square.svg');
+    bottom: -125px;
+    content: '';
+    height: 250px;
+    left: -125px;
+    position: absolute;
+    width: 250px;
+    z-index: -1;
 }
 
 @keyframes slidy {
