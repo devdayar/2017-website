@@ -5,7 +5,7 @@ const path = require('path')
 const configPath = path.join(__dirname, 'gulp', 'configuration')
 const config = require(configPath)
 
-function getTask (taskName) {
+function getTask(taskName) {
     const taskPath = path.join(__dirname, 'gulp/tasks', taskName)
     return require(taskPath)(config)
 }
@@ -28,6 +28,8 @@ gulp.task('html-clean', getTask('html/html-clean'))
 gulp.task('js-build', ['js-clean', 'js-lint'], getTask('js/js-build'))
 gulp.task('js-clean', getTask('js/js-clean'))
 gulp.task('js-lint', getTask('js/js-lint'))
+
+gulp.task('browser-sync', getTask('general/browser-sync'))
 
 gulp.task('watch', getTask('general/watch'))
 

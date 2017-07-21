@@ -1,15 +1,10 @@
 {
-    "plugins": [
-        "stylelint-order"
-    ],
+    "plugins": ["stylelint-order"],
     "rules": {
         "at-rule-empty-line-before": [
             "always",
             {
-                "except": [
-                    "blockless-after-same-name-blockless",
-                    "first-nested"
-                ],
+                "except": ["blockless-after-same-name-blockless", "first-nested"],
                 "ignore": ["after-comment"]
             }
         ],
@@ -39,14 +34,8 @@
         "custom-property-empty-line-before": [
             "always",
             {
-                "except": [
-                    "after-custom-property",
-                    "first-nested"
-                ],
-                "ignore": [
-                    "after-comment",
-                    "inside-single-line-block"
-                ]
+                "except": ["after-custom-property", "first-nested"],
+                "ignore": ["after-comment", "inside-single-line-block"]
             }
         ],
         "declaration-bang-space-after": "never",
@@ -70,14 +59,8 @@
         "declaration-empty-line-before": [
             "always",
             {
-                "except": [
-                    "after-declaration",
-                    "first-nested"
-                ],
-                "ignore": [
-                    "after-comment",
-                    "inside-single-line-block"
-                ]
+                "except": ["after-declaration", "first-nested"],
+                "ignore": ["after-comment", "inside-single-line-block"]
             }
         ],
         "font-family-no-duplicate-names": true,
