@@ -24,8 +24,8 @@ module.exports = {
     src: {
         assets: 'src/assets/**/*.*',
         css: 'src/css/main.css',
-        js: 'src/js/*.js',
-        html: 'src/*.html'
+        html: 'src/*.html',
+        js: 'src/js/*.js'
     },
     staticServer: {
         dir: './dist',

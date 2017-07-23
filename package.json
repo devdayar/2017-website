@@ -4,6 +4,7 @@
     "scripts": {
         "build-prod": "gulp build --production",
         "start": "gulp",
+        "start-prod": "gulp --production",
         "task": "gulp --"
     },
     "author": "durancristhian@gmail.com",
