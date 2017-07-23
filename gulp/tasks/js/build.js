@@ -1,19 +1,17 @@
 const babelify = require('babelify')
 const browserify = require('browserify')
-const browserSync = require('browser-sync')
 const buffer = require('vinyl-buffer')
 const es = require('event-stream')
 const glob = require('glob')
 const gulp = require('gulp')
 const gulpIf = require('gulp-if')
 const gutil = require('gulp-util')
+const rev = require('gulp-rev')
 const source = require('vinyl-source-stream')
 const sourcemaps = require('gulp-sourcemaps')
 const uglify = require('gulp-uglify')
 
 module.exports = function(config) {
-    const server = browserSync.get(config.staticServer.name)
-
     return function(done) {
         glob(config.src.js, (err, files) => {
             if (err) done(err)
@@ -37,8 +35,10 @@ module.exports = function(config) {
                     .pipe(gulpIf(!config.isProduction, sourcemaps.init({ loadMaps: true })))
                     .pipe(gulpIf(config.isProduction, uglify()))
                     .pipe(gulpIf(!config.isProduction, sourcemaps.write('./')))
+                    .pipe(rev())
                     .pipe(gulp.dest(config.dest.js))
-                    .pipe(server.stream())
+                    .pipe(rev.manifest('manifest.json'))
+                    .pipe(gulp.dest(config.dest.js))
                     .on('error', gutil.log)
             })
 

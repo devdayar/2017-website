@@ -9,13 +9,15 @@ module.exports = {
         assets: 'dist/assets/*',
         css: 'dist/css/*',
         html: 'dist/*.html',
-        js: 'dist/js/*'
+        js: 'dist/js/*',
+        manifest: 'dist/**/manifest.json'
     },
     dest: {
         assets: 'dist/assets',
         css: 'dist/css',
         html: 'dist/',
-        js: 'dist/js'
+        js: 'dist/js',
+        manifest: 'dist/**/manifest.json'
     },
     eslint: {
         files: 'src/js/**/*.js'
