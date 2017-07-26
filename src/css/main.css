@@ -68,23 +68,6 @@
     opacity: 1;
 }
 
-.slider {
-    overflow: hidden;
-}
-
-.slides {
-    animation: slidy 30s infinite alternate;
-    left: 0;
-    position: relative;
-    width: 500%;
-}
-
-.slides > img {
-    float: left;
-    vertical-align: bottom;
-    width: 20%;
-}
-
 @keyframes rotate {
     from {
         transform: rotate(0);
@@ -123,7 +106,7 @@
     }
 }
 
-.triangle {
+.square {
     animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-name: rotate;
@@ -134,6 +117,23 @@
     position: absolute;
     width: 250px;
     z-index: -1;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slides {
+    animation: slidy 30s infinite alternate;
+    left: 0;
+    position: relative;
+    width: 500%;
+}
+
+.slides > img {
+    float: left;
+    vertical-align: bottom;
+    width: 20%;
 }
 
 @keyframes slidy {
@@ -180,6 +180,17 @@
 
 [data-aload] {
     background-image: none !important;
+}
+
+@media screen and (min-width: 60em) {
+    .diamond-l {
+        bottom: -125px;
+        height: 525px;
+        position: absolute;
+        right: -200px;
+        width: 650px;
+        z-index: -1;
+    }
 }
 
 @media screen and (min-width: 70em) {
