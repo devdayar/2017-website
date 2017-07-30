@@ -10,14 +10,16 @@ module.exports = {
         css: 'dist/css/*',
         html: 'dist/*.html',
         js: 'dist/js/*',
-        manifest: 'dist/**/manifest.json'
+        manifest: 'dist/**/revision-manifest.json',
+        pwaManifest: 'dist/manifest.json'
     },
     dest: {
         assets: 'dist/assets',
         css: 'dist/css',
         html: 'dist/',
         js: 'dist/js',
-        manifest: 'dist/**/manifest.json'
+        manifest: 'dist/**/revision-manifest.json',
+        pwaManifest: 'dist/'
     },
     eslint: {
         files: 'src/js/**/*.js'
@@ -27,7 +29,8 @@ module.exports = {
         assets: 'src/assets/**/*.*',
         css: 'src/css/main.css',
         html: 'src/*.html',
-        js: 'src/js/*.js'
+        js: 'src/js/*.js',
+        pwaManifest: 'src/manifest.json'
     },
     staticServer: {
         dir: './dist',

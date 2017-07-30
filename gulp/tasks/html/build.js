@@ -11,11 +11,13 @@ module.exports = function(config) {
     const server = browserSync.get(config.staticServer.name)
 
     return function() {
-        return gulp
-            .src([config.src.html, config.dest.manifest])
-            .pipe(revCollector())
-            .pipe(htmlmin(htmlminOptions))
-            .pipe(gulp.dest(config.dest.html))
-            .pipe(server.stream())
+        return (
+            gulp
+                .src([config.src.html, config.dest.manifest])
+                // .pipe(revCollector())
+                .pipe(htmlmin(htmlminOptions))
+                .pipe(gulp.dest(config.dest.html))
+                .pipe(server.stream())
+        )
     }
 }

@@ -37,6 +37,9 @@ gulp.task('js-lint', getTask('js/lint'))
 
 gulp.task('manifest-clean', getTask('manifest/clean'))
 
+gulp.task('pwa', ['pwa-clean'], getTask('pwa/copy'))
+gulp.task('pwa-clean', getTask('pwa/clean'))
+
 gulp.task('watch', getTask('general/watch'))
 
 gulp.task('default', ['build', 'watch'], getTask('general/browser-sync'))

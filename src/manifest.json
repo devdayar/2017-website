@@ -1,0 +1,17 @@
+{
+    "short_name": "DevDayAr 2017",
+    "name": "DevDayAr 2017",
+    "description": "DevDayAr 2017 Progressive Web Application",
+    "icons": [
+        {
+            "src": "./assets/icon.png",
+            "sizes": "48x48 72x72 96x96 144x144 192x192 256x256",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#51ffe1",
+    "background_color": "#5f80ba"
+}
